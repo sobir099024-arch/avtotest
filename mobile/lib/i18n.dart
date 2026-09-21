@@ -53,6 +53,11 @@ const Map<String, Map<String, String>> _dict = {
   'yourAnswer': {'uz-Latn': 'Sizning javobingiz', 'uz-Cyrl': 'Сизнинг жавобингиз', 'ru': 'Ваш ответ'},
   'noAnswer': {'uz-Latn': 'Javob berilmagan', 'uz-Cyrl': 'Жавоб берилмаган', 'ru': 'Без ответа'},
   'bestResult': {'uz-Latn': 'Eng yaxshi natija', 'uz-Cyrl': 'Энг яхши натижа', 'ru': 'Лучший результат'},
+  'heroSubtitle': {
+    'uz-Latn': "YHQ nazariy imtihoniga tayyorgarlik",
+    'uz-Cyrl': 'ЙҲҚ назарий имтиҳонига тайёргарлик',
+    'ru': 'Подготовка к теоретическому экзамену ПДД',
+  },
   'dataSource': {
     'uz-Latn': "Savollar manbasi: sherzod-prostaleev/avtotestuz (ochiq repo)",
     'uz-Cyrl': 'Саволлар манбаси: sherzod-prostaleev/avtotestuz (очиқ репо)',

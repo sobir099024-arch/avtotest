@@ -54,6 +54,11 @@ const dict = {
   reviewAnswers: { "uz-Latn": "Javoblarni ko'rish", "uz-Cyrl": "Жавобларни кўриш", ru: "Просмотреть ответы" },
   yourAnswer: { "uz-Latn": "Sizning javobingiz", "uz-Cyrl": "Сизнинг жавобингиз", ru: "Ваш ответ" },
   noAnswer: { "uz-Latn": "Javob berilmagan", "uz-Cyrl": "Жавоб берилмаган", ru: "Без ответа" },
+  heroSubtitle: {
+    "uz-Latn": "YHQ nazariy imtihoniga tayyorgarlik",
+    "uz-Cyrl": "ЙҲҚ назарий имтиҳонига тайёргарлик",
+    ru: "Подготовка к теоретическому экзамену ПДД",
+  },
   dataSource: {
     "uz-Latn": "Savollar manbasi: sherzod-prostaleev/avtotestuz (ochiq repo)",
     "uz-Cyrl": "Саволлар манбаси: sherzod-prostaleev/avtotestuz (очиқ репо)",

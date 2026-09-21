@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'app_state.dart';
+import 'theme.dart';
 import 'screens/home_screen.dart';
 import 'screens/tickets_screen.dart';
 import 'screens/categories_screen.dart';
@@ -38,11 +39,7 @@ class _AvtoTestAppState extends State<AvtoTestApp> {
       child: MaterialApp(
         title: 'AvtoTest',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorSchemeSeed: const Color(0xFF2563EB),
-          scaffoldBackgroundColor: const Color(0xFFF8FAFC),
-          useMaterial3: true,
-        ),
+        theme: buildAppTheme(),
         initialRoute: '/',
         routes: {
           '/': (_) => const HomeScreen(),
