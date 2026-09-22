@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import { useLocale } from "./LocaleContext";
 import { LOCALES } from "./types";
+import { UserMenu } from "./components/UserMenu";
 
 const SHORT: Record<string, string> = { "uz-Latn": "UZ", "uz-Cyrl": "ЎЗ", ru: "RU" };
 
@@ -45,6 +46,7 @@ export default function Layout() {
               <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
+          <UserMenu />
         </div>
       </header>
       <main className="max-w-3xl mx-auto px-4 py-6">

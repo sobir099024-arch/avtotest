@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../theme.dart';
 import '../widgets/app_scaffold.dart';
+import '../widgets/user_menu.dart';
 
 class _HomeCard {
   final String route;
@@ -69,7 +70,14 @@ class _Hero extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          LocaleSwitch(background: Colors.white.withValues(alpha: 0.16), foreground: Colors.white),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const UserMenu(foreground: Colors.white),
+              const SizedBox(width: 8),
+              LocaleSwitch(background: Colors.white.withValues(alpha: 0.16), foreground: Colors.white),
+            ],
+          ),
           const SizedBox(height: 14),
           Row(
             children: [

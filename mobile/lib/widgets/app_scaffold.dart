@@ -3,6 +3,7 @@ import '../app_state.dart';
 import '../models.dart';
 import '../i18n.dart';
 import '../theme.dart';
+import 'user_menu.dart';
 
 class AppScaffold extends StatelessWidget {
   final String title;
@@ -22,7 +23,8 @@ class AppScaffold extends StatelessWidget {
       appBar: AppBar(
         title: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis),
         actions: [
-          if (showLocaleSwitch) const Padding(padding: EdgeInsets.only(right: 12), child: LocaleSwitch()),
+          if (showLocaleSwitch) const Padding(padding: EdgeInsets.only(right: 8), child: LocaleSwitch()),
+          const Padding(padding: EdgeInsets.only(right: 12), child: UserMenu()),
         ],
       ),
       body: SafeArea(child: body),

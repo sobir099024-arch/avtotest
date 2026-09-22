@@ -58,10 +58,20 @@ const Map<String, Map<String, String>> _dict = {
     'uz-Cyrl': 'ЙҲҚ назарий имтиҳонига тайёргарлик',
     'ru': 'Подготовка к теоретическому экзамену ПДД',
   },
+  'signInGoogle': {
+    'uz-Latn': 'Google bilan kirish',
+    'uz-Cyrl': 'Google билан кириш',
+    'ru': 'Войти через Google',
+  },
+  'signOut': {
+    'uz-Latn': 'Chiqish',
+    'uz-Cyrl': 'Чиқиш',
+    'ru': 'Выйти',
+  },
   'dataSource': {
-    'uz-Latn': "Savollar manbasi: sherzod-prostaleev/avtotestuz (ochiq repo)",
-    'uz-Cyrl': 'Саволлар манбаси: sherzod-prostaleev/avtotestuz (очиқ репо)',
-    'ru': 'Источник вопросов: sherzod-prostaleev/avtotestuz (открытый репозиторий)',
+    'uz-Latn': "Savollar manbasi: Hoffenuz/avtotestu-v3.0.0 (ochiq repo)",
+    'uz-Cyrl': 'Саволлар манбаси: Hoffenuz/avtotestu-v3.0.0 (очиқ репо)',
+    'ru': 'Источник вопросов: Hoffenuz/avtotestu-v3.0.0 (открытый репозиторий)',
   },
 };
 

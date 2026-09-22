@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'app_state.dart';
+import 'cloud_sync.dart';
 import 'theme.dart';
 import 'screens/home_screen.dart';
 import 'screens/tickets_screen.dart';
 import 'screens/categories_screen.dart';
 import 'screens/exam_start_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initFirebase();
   runApp(const AvtoTestApp());
 }
 
@@ -24,6 +27,7 @@ class _AvtoTestAppState extends State<AvtoTestApp> {
   void initState() {
     super.initState();
     _appState.loadLocale();
+    _appState.initAuth();
   }
 
   @override
