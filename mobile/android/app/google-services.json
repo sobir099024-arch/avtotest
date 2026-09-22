@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "816933496481",
+    "firebase_url": "https://avto-test-e6978-default-rtdb.firebaseio.com",
+    "project_id": "avto-test-e6978",
+    "storage_bucket": "avto-test-e6978.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816933496481:android:ce2eb1ecf3e86bf9c7b2e0",
+        "android_client_info": {
+          "package_name": "uz.avtotest.avtotest_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816933496481-ku78vsem7pbi46anodmi4vm99eose5o3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCterWbhGboLdNqM99GMSqSvMzjf1fvUb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816933496481-ku78vsem7pbi46anodmi4vm99eose5o3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
