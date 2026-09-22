@@ -70,18 +70,52 @@ Play Console → App integrity'dagi SHA-1'ni qo'shing).
 > analyze` esa xatosiz o'tdi). Birinchi `flutter run` paytida Gradle xatolik
 > bersa, xato matnini yuboring — birga tuzatamiz.
 
-Flutter Web'da ishlatmoqchi bo'lsangiz, `lib/firebase_options.dart`dagi
-`web` blokini ham to'ldiring (yoki `flutterfire configure` bilan ikkala
-platformani birga sozlang — buning uchun Firebase CLI kerak):
+(`lib/firebase_options.dart`dagi `web` bloki hali placeholder — bu Play
+Market uchun ahamiyatsiz, faqat Flutter Web'ga ta'sir qiladi.)
 
-```bash
-npm install -g firebase-tools
-dart pub global activate flutterfire_cli
-firebase login
-flutterfire configure
-```
+## Play Market uchun imzolash (release keystore)
 
-`lib/firebase_options.dart`dagi `web` bloki placeholder holida qolsa ham
-muammo yo'q — bu faqat Flutter Web'ga ta'sir qiladi, Android'da
-`Firebase.initializeApp()` haqiqiy config bilan ishlayveradi
-(`cloud_sync.dart`dagi `firebaseEnabled` buni boshqaradi).
+Play Store `flutter build apk`ning debug-imzolangan versiyasini qabul
+qilmaydi — o'zingizning release keystore'ingiz kerak. Buni **faqat bir
+marta** yaratasiz va uni **hech qachon yo'qotmang** (yo'qolsa, ilovani
+keyingi yangilanishlarda qayta imzolab bo'lmaydi — Play Store yangi ilova
+sifatida qaraydi).
+
+1. Keystore yarating (`mobile/android/app/` papkasida ishga tushiring —
+   JDK/keytool kerak, odatda Android Studio bilan birga keladi):
+   ```bash
+   cd android/app
+   keytool -genkey -v -keystore upload-keystore.jks \
+     -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+   ```
+   So'raladigan parollarni **eslab qoling** (parol menejerga saqlang) —
+   ism-familiya va tashkilot kabi savollarga xohlagan javobni berishingiz
+   mumkin, ular muhim emas.
+2. `android/key.properties.example`ni nusxalab `android/key.properties`
+   qiling (bu fayl **gitignore qilingan** — hech qachon commit bo'lmaydi)
+   va keytool'da kiritgan parollar bilan to'ldiring:
+   ```bash
+   cd ..
+   cp key.properties.example key.properties
+   # key.properties'ni ochib storePassword/keyPassword'ni to'ldiring
+   ```
+3. Endi release build **avtomatik shu keystore bilan imzolanadi**:
+   ```bash
+   cd ..
+   flutter build appbundle --release   # Play Store .aab (tavsiya etiladi)
+   # yoki
+   flutter build apk --release         # to'g'ridan-to'g'ri sinash uchun .apk
+   ```
+   `.aab` fayli: `build/app/outputs/bundle/release/app-release.aab` —
+   shuni Play Console'ga yuklaysiz.
+4. Shu keystore'ning SHA-1'ini ham Firebase Console'ga qo'shing (yuqoridagi
+   "Firebase sozlash"dagi kabi, lekin `signingReport`da **release**
+   variant qatoridan oling — debug emas):
+   ```bash
+   cd android && ./gradlew signingReport
+   ```
+
+`upload-keystore.jks` va `key.properties` — ikkalasi ham gitignore
+qilingan: repo'da hech qachon ko'rinmaydi, faqat sizning kompyuteringizda
+qoladi. Boshqa kompyuterda build qilmoqchi bo'lsangiz, shu ikki faylni
+o'zingiz (xavfsiz kanal orqali) ko'chirib olib borishingiz kerak.

@@ -1,0 +1,7 @@
+# Copy this to android/key.properties (gitignored — never commit the real
+# file) after generating your release keystore. See mobile/README.md
+# "Play Market uchun imzolash" for the exact keytool command.
+storePassword=YOUR_KEYSTORE_PASSWORD
+keyPassword=YOUR_KEY_PASSWORD
+keyAlias=upload
+storeFile=upload-keystore.jks
