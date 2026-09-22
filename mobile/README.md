@@ -5,23 +5,24 @@ ma'lumot bilan ishlaydigan Android ilovasi.
 
 ## Xususiyatlar
 
-- **Biletlar** — 64 ta rasmiy bilet, har biri 20 savoldan.
-- **Mavzular** — 42 ta kategoriya bo'yicha tasodifiy mashq (20 tadan).
+- **Biletlar** — 64 ta rasmiy bilet (63 tasi 20 tadan, 64-biletda 15 ta savol).
+- **Mavzular** — 33 ta mavzu bo'yicha tasodifiy mashq (20 tadan).
 - **Imtihon** — 20 ta tasodifiy savol, 25 daqiqa, 3-xatoda avtomatik to'xtaydi.
 - 3 tilda: o'zbekcha (lotin/kirill) va ruscha.
-- Ma'lumotlar `assets/data/*.json` ichida ilova bilan birga keladi (internet
-  yoki server shart emas). Natijalar/rekordlar `shared_preferences` orqali
-  qurilmada lokal saqlanadi.
+- Har bir savolda izoh, 754/1275 savolda rasm.
+- Ma'lumotlar `assets/data/*.json` va `assets/images/questions/*.webp` ichida
+  ilova bilan birga keladi (internet yoki server shart emas). Natijalar/
+  rekordlar `shared_preferences` orqali qurilmada lokal saqlanadi.
 
-Savol ma'lumotlari `../scripts/build-data.py` va `../scripts/attach-images.py`
-bilan tayyorlangan bir xil `public/data/*.json` va `public/images/questions/`
-fayllaridan nusxalangan (520 ta savol rasmi bilan — tafsilot uchun asosiy
-`../README.md`ga qarang). Yangilash uchun avval web-ilova tomonida
-skriptlarni qayta ishga tushiring, so'ng:
+Savol ma'lumotlari `../scripts/build-data.py` bilan tayyorlangan bir xil
+`public/data/*.json` va `public/images/questions/` fayllaridan nusxalangan
+(manba: [`Hoffenuz/avtotestu-v3.0.0`](https://github.com/Hoffenuz/avtotestu-v3.0.0) —
+tafsilot uchun asosiy `../README.md`ga qarang). Yangilash uchun avval
+web-ilova tomonida skriptni qayta ishga tushiring, so'ng:
 
 ```bash
 cp ../public/data/*.json assets/data/
-cp -r ../public/images/questions assets/images/
+cp -r ../public/images/questions/. assets/images/questions/
 ```
 
 ## Ishga tushirish

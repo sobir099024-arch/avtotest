@@ -5,29 +5,33 @@ brauzerda ishlaydigan, backendsiz mashq ilovasi.
 
 ## Xususiyatlar
 
-- **Biletlar** — 64 ta rasmiy bilet, har biri 20 savoldan.
-- **Mavzular** — 42 ta kategoriya bo'yicha tasodifiy mashq (20 tadan).
+- **Biletlar** — 64 ta rasmiy bilet (63 tasi 20 tadan, 64-biletda 15 ta savol —
+  manbadagi haqiqiy tarkib).
+- **Mavzular** — 33 ta mavzu bo'yicha tasodifiy mashq (20 tadan).
 - **Imtihon** — 20 ta tasodifiy savol, 25 daqiqa, 3-xatoda avtomatik to'xtaydi
   (haqiqiy imtihon qoidasi).
 - 3 tilda: o'zbekcha (lotin/kirill) va ruscha.
+- Har bir savolda tasdiqlangan **izoh** va (mavjud bo'lsa) **rasm**.
 - Natijalar va rekordlar brauzer `localStorage`'ida saqlanadi (backend/DB yo'q).
 
 ## Ma'lumotlar manbai
 
-Savol/javob/izoh matnlari ochiq [`sherzod-prostaleev/avtotestuz`](https://github.com/sherzod-prostaleev/avtotestuz)
-repozitoriyasidagi `backend/seed/avtoimtihon/data.json`dan olingan va
-`scripts/build-data.py` yordamida `public/data/*.json`ga qayta ishlangan
-(faqat frontendga kerakli maydonlar qoldirilgan).
+Barcha kontent (1275 savol, 64 bilet, 33 mavzu, izohlar, rasmlar) ochiq
+[`Hoffenuz/avtotestu-v3.0.0`](https://github.com/Hoffenuz/avtotestu-v3.0.0)
+repozitoriyasidan (`public/barcha.json`, `public/mavzuli2/*.json`,
+`public/images/`) `scripts/build-data.py` yordamida qayta ishlangan:
 
-**Rasmlar:** manba repoda savol rasmlari (`.webp`) `.gitignore` qilingan va
-git tarixida yo'q. O'rniga [`Hoffenuz/avtotestu-v3.0.0`](https://github.com/Hoffenuz/avtotestu-v3.0.0)
-(bir xil rasmiy YHQ savol bankining mustaqil transkripsiyasi, rasmlar bilan)
-dan mos savollar `scripts/attach-images.py` orqali matn+javob solishtirish
-bilan topilgan (746 tadan **520 tasi** ishonchli moslashtirilgan — savol matni
-va kamida yarim javob varianti mos kelgandagina rasm bog'lanadi, xato
-moslashuvning oldini olish uchun). Qolgan ~226 savolda hamon ("Rasm mavjud
-emas") belgisi ko'rsatiladi. Rasmlar `public/images/questions/<savol-id>.webp`
-da saqlanadi.
+```bash
+git clone https://github.com/Hoffenuz/avtotestu-v3.0.0 ../avtotestu-v3.0.0
+python3 scripts/build-data.py ../avtotestu-v3.0.0
+cp public/data/*.json mobile/assets/data/
+cp -r public/images/questions/. mobile/assets/images/questions/
+```
+
+Bu manba xuddi shu rasmiy YHQ savol bankining mustaqil transkripsiyasi —
+avvalgi `sherzod-prostaleev/avtotestuz`dan farqli o'laroq **har bir savolda
+izoh** va savollarning **59%'ida (754/1275) rasm** bilan birga keladi (qolgan
+savollarda vizual material shart emas — faqat matn asosida javob beriladi).
 
 ## Ishga tushirish
 
