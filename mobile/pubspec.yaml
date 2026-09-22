@@ -62,6 +62,7 @@ flutter:
     - assets/data/questions.json
     - assets/data/variants.json
     - assets/data/categories.json
+    - assets/images/questions/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

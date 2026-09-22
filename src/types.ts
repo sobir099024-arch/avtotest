@@ -21,6 +21,7 @@ export interface Question {
   id: string;
   category: string;
   hasImage: boolean;
+  image?: string;
   texts: LocalizedText;
   answers: Answer[];
   explanation?: Partial<Record<Locale, ExplanationBlock[]>>;

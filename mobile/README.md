@@ -13,10 +13,16 @@ ma'lumot bilan ishlaydigan Android ilovasi.
   yoki server shart emas). Natijalar/rekordlar `shared_preferences` orqali
   qurilmada lokal saqlanadi.
 
-Savol ma'lumotlari `../scripts/build-data.py` bilan tayyorlangan bir xil
-`public/data/*.json` fayllaridan nusxalangan — yangilash uchun avval
-web-ilova tomonida skriptni qayta ishga tushiring, so'ng
-`cp ../public/data/*.json assets/data/`.
+Savol ma'lumotlari `../scripts/build-data.py` va `../scripts/attach-images.py`
+bilan tayyorlangan bir xil `public/data/*.json` va `public/images/questions/`
+fayllaridan nusxalangan (520 ta savol rasmi bilan — tafsilot uchun asosiy
+`../README.md`ga qarang). Yangilash uchun avval web-ilova tomonida
+skriptlarni qayta ishga tushiring, so'ng:
+
+```bash
+cp ../public/data/*.json assets/data/
+cp -r ../public/images/questions assets/images/
+```
 
 ## Ishga tushirish
 

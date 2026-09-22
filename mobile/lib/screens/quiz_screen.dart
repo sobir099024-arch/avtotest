@@ -214,7 +214,19 @@ class _QuizScreenState extends State<QuizScreen> {
                 padding: const EdgeInsets.all(16),
                 children: [
                   Text(q.texts.get(locale), style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w600, height: 1.35)),
-                  if (q.hasImage)
+                  if (q.hasImage && q.image != null)
+                    Container(
+                      margin: const EdgeInsets.only(top: 12),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(color: Colors.grey.shade200),
+                      ),
+                      clipBehavior: Clip.antiAlias,
+                      constraints: const BoxConstraints(maxHeight: 260),
+                      width: double.infinity,
+                      child: Image.asset('assets/${q.image}', fit: BoxFit.contain),
+                    ),
+                  if (q.hasImage && q.image == null)
                     Container(
                       margin: const EdgeInsets.only(top: 12),
                       padding: const EdgeInsets.all(14),

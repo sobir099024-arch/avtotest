@@ -19,10 +19,15 @@ repozitoriyasidagi `backend/seed/avtoimtihon/data.json`dan olingan va
 `scripts/build-data.py` yordamida `public/data/*.json`ga qayta ishlangan
 (faqat frontendga kerakli maydonlar qoldirilgan).
 
-**Eslatma:** manba repoda savol rasmlari (`.webp`) `.gitignore` qilingan va
-git tarixida yo'q, shuning uchun bu ilovada ham mavjud emas — rasmga muhtoj
-savollarda ("Rasm mavjud emas") belgisi ko'rsatiladi. Yo'l belgilari katalogi
-rasmlari manbada mavjud, lekin hozircha savollarga bog'lanmagan.
+**Rasmlar:** manba repoda savol rasmlari (`.webp`) `.gitignore` qilingan va
+git tarixida yo'q. O'rniga [`Hoffenuz/avtotestu-v3.0.0`](https://github.com/Hoffenuz/avtotestu-v3.0.0)
+(bir xil rasmiy YHQ savol bankining mustaqil transkripsiyasi, rasmlar bilan)
+dan mos savollar `scripts/attach-images.py` orqali matn+javob solishtirish
+bilan topilgan (746 tadan **520 tasi** ishonchli moslashtirilgan — savol matni
+va kamida yarim javob varianti mos kelgandagina rasm bog'lanadi, xato
+moslashuvning oldini olish uchun). Qolgan ~226 savolda hamon ("Rasm mavjud
+emas") belgisi ko'rsatiladi. Rasmlar `public/images/questions/<savol-id>.webp`
+da saqlanadi.
 
 ## Ishga tushirish
 

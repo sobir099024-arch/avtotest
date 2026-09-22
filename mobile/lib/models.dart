@@ -74,6 +74,7 @@ class Question {
   final String id;
   final String category;
   final bool hasImage;
+  final String? image;
   final LocalizedText texts;
   final List<Answer> answers;
   final Map<String, List<ExplanationBlock>> explanation;
@@ -82,6 +83,7 @@ class Question {
     required this.id,
     required this.category,
     required this.hasImage,
+    required this.image,
     required this.texts,
     required this.answers,
     required this.explanation,
@@ -104,6 +106,7 @@ class Question {
       id: json['id'] as String,
       category: json['category'] as String,
       hasImage: json['hasImage'] as bool? ?? false,
+      image: json['image'] as String?,
       texts: LocalizedText.fromJson(json['texts'] as Map<String, dynamic>?),
       answers: (json['answers'] as List<dynamic>? ?? [])
           .map((a) => Answer.fromJson(a as Map<String, dynamic>))

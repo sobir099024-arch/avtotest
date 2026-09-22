@@ -238,7 +238,14 @@ export default function Quiz({ config }: { config: QuizConfig }) {
       </div>
       <div className="bg-white border border-slate-200 rounded-2xl p-5">
         <div className="text-base font-medium mb-3">{tl(q.texts, locale)}</div>
-        {q.hasImage && (
+        {q.hasImage && q.image && (
+          <img
+            src={`${import.meta.env.BASE_URL}${q.image}`}
+            alt=""
+            className="mb-3 w-full max-h-72 object-contain rounded-xl border border-slate-200 bg-slate-50"
+          />
+        )}
+        {q.hasImage && !q.image && (
           <div className="mb-3 text-xs text-slate-400 bg-slate-100 rounded-xl p-4 text-center border border-slate-200">
             {t("imageMissing", locale)}
           </div>
