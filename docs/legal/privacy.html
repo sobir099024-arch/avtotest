@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AvtoTest — Политика конфиденциальности</title>
+<meta name="description" content="Политика конфиденциальности мобильного приложения AvtoTest: какие данные собираются, как используются и с кем передаются.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf8f4;
+    --surface:#ffffff;
+    --ink:#1c1a17;
+    --ink-soft:#5b564d;
+    --line:#e6e1d6;
+    --accent:#0f6b4c;
+    --accent-soft:#e4f2ec;
+    --serif:'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --sans:'Manrope', -apple-system, 'Segoe UI', sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#15140f;
+      --surface:#1e1c17;
+      --ink:#f2efe8;
+      --ink-soft:#b4ad9e;
+      --line:#332f26;
+      --accent:#4fd3a0;
+      --accent-soft:#1c2e26;
+      color-scheme: dark;
+    }
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.6;
+  }
+  img{ max-width:100%; }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:48px 20px 80px;
+  }
+  header.page{ margin-bottom:40px; }
+  .kicker{
+    font-family:var(--sans);
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 14px;
+  }
+  h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(28px, 5vw, 40px);
+    line-height:1.15;
+    margin:0 0 12px;
+    text-wrap:balance;
+  }
+  .meta{ color:var(--ink-soft); font-size:14px; margin:0; }
+  .card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:28px clamp(20px,4vw,36px);
+  }
+  section{ margin:0 0 34px; scroll-margin-top:24px; }
+  section:last-child{ margin-bottom:0; }
+  h2{
+    font-family:var(--sans);
+    font-size:18px;
+    font-weight:800;
+    margin:0 0 12px;
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+  }
+  h2 .num{ font-family:var(--serif); color:var(--accent); font-size:15px; font-weight:600; }
+  p{ margin:0 0 12px; color:var(--ink); }
+  p:last-child{ margin-bottom:0; }
+  ul{ margin:0 0 12px; padding-left:20px; }
+  li{ margin-bottom:8px; }
+  li:last-child{ margin-bottom:0; }
+  strong{ font-weight:700; }
+  .pill-row{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 14px; }
+  .pill{
+    font-size:12.5px; font-weight:600; padding:6px 12px; border-radius:999px;
+    background:var(--accent-soft); color:var(--accent); white-space:nowrap;
+  }
+  table{ width:100%; border-collapse:collapse; font-size:14px; margin:0 0 12px; }
+  th,td{ text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ color:var(--ink-soft); font-weight:700; font-size:12.5px; text-transform:uppercase; letter-spacing:.04em; }
+  .table-wrap{ overflow-x:auto; margin:0 0 12px; }
+  a{ color:var(--accent); }
+  .contact{ margin-top:44px; text-align:center; color:var(--ink-soft); font-size:13.5px; }
+  .contact strong{ color:var(--ink); }
+  hr.rule{ border:none; border-top:1px solid var(--line); margin:0 0 34px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <p class="kicker">AvtoTest &middot; Политика конфиденциальности</p>
+    <h1>Как используются ваши данные</h1>
+    <p class="meta">Дата вступления в силу: 23 сентября 2026 г. &nbsp;&middot;&nbsp; Приложение: AvtoTest (Android, <code>uz.avtotest.avtotest_mobile</code>)</p>
+  </header>
+
+  <div class="card">
+
+    <section>
+      <h2><span class="num">01</span> Общие сведения</h2>
+      <p>
+        AvtoTest — бесплатное мобильное приложение для подготовки к экзамену на
+        водительское удостоверение по правилам дорожного движения Узбекистана.
+        На этой странице объясняется, какие данные собираются при использовании
+        приложения, как они используются и с кем передаются.
+      </p>
+      <p>Используя приложение, вы соглашаетесь с условиями настоящей политики.</p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2><span class="num">02</span> Какие данные собираются</h2>
+      <div class="pill-row">
+        <span class="pill">Вход через Google</span>
+        <span class="pill">Результаты тестов</span>
+        <span class="pill">Рекламный идентификатор</span>
+        <span class="pill">Данные устройства</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Тип данных</th><th>Когда собирается</th><th>Цель</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Имя, email, фото профиля</strong></td>
+              <td>Только при нажатии кнопки «Войти через Google» (по желанию)</td>
+              <td>Идентификация вашего аккаунта и синхронизация результатов между устройствами</td>
+            </tr>
+            <tr>
+              <td><strong>Результаты тестов (правильные/неправильные ответы, дата)</strong></td>
+              <td>При завершении каждого теста</td>
+              <td>Сохранение прогресса на устройстве и (при входе в аккаунт) синхронизация в облаке через Firebase Cloud Firestore</td>
+            </tr>
+            <tr>
+              <td><strong>Выбор языка и настройки</strong></td>
+              <td>Во время использования приложения</td>
+              <td>Хранится только локально на устройстве (SharedPreferences), на сервер не отправляется</td>
+            </tr>
+            <tr>
+              <td><strong>Рекламный идентификатор (Advertising ID), данные об устройстве и взаимодействии с рекламой</strong></td>
+              <td>При запуске приложения и показе рекламы</td>
+              <td>Показ рекламы и учёт дохода через Google AdMob</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Приложение <strong>не собирает платёжные данные, номер телефона или
+        паспортные данные</strong>. Вход через Google необязателен — всеми
+        функциями тестирования можно пользоваться без входа в аккаунт, в этом
+        случае результаты сохраняются только на вашем устройстве.
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2><span class="num">03</span> Сторонние сервисы</h2>
+      <p>Приложение использует следующие сервисы Google, у каждого из которых своя политика конфиденциальности:</p>
+      <ul>
+        <li><strong>Firebase Authentication</strong> (Google Sign-In) — для входа в аккаунт.</li>
+        <li><strong>Cloud Firestore</strong> — для хранения результатов тестов в облаке (только для авторизованных пользователей).</li>
+        <li><strong>Google AdMob</strong> — для показа рекламы внутри приложения; обрабатывает рекламный
+          идентификатор и общие (неперсонализирующие вас) данные об устройстве.</li>
+      </ul>
+      <p>
+        Через эти сервисы ваши данные могут обрабатываться компанией Google LLC
+        в соответствии с её собственной
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Политикой конфиденциальности</a>.
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2><span class="num">04</span> Хранение данных и безопасность</h2>
+      <p>
+        Синхронизированные в облако данные хранятся на серверах Google Cloud
+        Firestore с использованием отраслевых стандартов безопасности. Доступ к
+        своим данным имеете только вы через свой аккаунт. Данные, сохранённые
+        локально (без входа в аккаунт), остаются только на вашем устройстве и
+        удаляются при удалении приложения.
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2><span class="num">05</span> Ваши права</h2>
+      <ul>
+        <li><strong>Запрос на удаление</strong> — вы можете запросить удаление своего аккаунта и всех результатов
+          в облаке, написав на email ниже; запрос обрабатывается в течение 30 дней.</li>
+        <li><strong>Выход из аккаунта</strong> — вы можете выйти из аккаунта в любой момент через меню профиля в приложении.</li>
+        <li><strong>Ограничение персонализации рекламы</strong> — вы можете отключить персонализированную рекламу
+          в настройках устройства: Настройки &rarr; Google &rarr; Реклама.</li>
+      </ul>
+    </section>
+
+    <hr class="rule">
+
+    <section id="delete-account">
+      <h2><span class="num">06</span> Удаление аккаунта и данных</h2>
+      <p>
+        Приложение <strong>AvtoTest</strong> (разработчик: Turgunov Sobirjon) позволяет
+        любому вошедшему в аккаунт пользователю запросить полное удаление своего
+        аккаунта и связанных с ним данных.
+      </p>
+      <p><strong>Как запросить удаление:</strong></p>
+      <ul>
+        <li>Шаг 1. Напишите письмо на адрес <strong>sobir_0990@mail.ru</strong> с темой
+          «Удаление аккаунта AvtoTest», указав email, использованный при входе через Google.</li>
+        <li>Шаг 2. В течение <strong>30 дней</strong> ваш аккаунт и все связанные с ним данные
+          будут удалены из Firebase Authentication и Cloud Firestore.</li>
+        <li>Шаг 3. Вы получите письмо-подтверждение на тот же email, когда удаление будет завершено.</li>
+      </ul>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Данные</th><th>Что происходит при удалении</th><th>Срок хранения</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Имя, email, фото профиля (Firebase Authentication)</td>
+              <td>Удаляются полностью</td>
+              <td>До получения запроса на удаление, но не более 30 дней после него</td>
+            </tr>
+            <tr>
+              <td>Результаты тестов в облаке (Cloud Firestore)</td>
+              <td>Удаляются полностью</td>
+              <td>До получения запроса на удаление, но не более 30 дней после него</td>
+            </tr>
+            <tr>
+              <td>Результаты тестов, сохранённые локально на устройстве</td>
+              <td>Не затрагиваются облачным удалением — удаляются при удалении приложения с устройства</td>
+              <td>Хранятся только на устройстве, пока приложение установлено</td>
+            </tr>
+            <tr>
+              <td>Рекламный идентификатор (AdMob)</td>
+              <td>Не связан с аккаунтом; управляется через настройки устройства, а не через это удаление</td>
+              <td>Определяется политикой Google AdMob</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2><span class="num">07</span> Конфиденциальность детей</h2>
+      <p>
+        Приложение предназначено для широкой аудитории и сознательно не собирает
+        персональные данные детей младше 13 лет. Рекламный контент ограничен
+        уровнем «Общая аудитория (G)».
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2><span class="num">08</span> Изменения в политике</h2>
+      <p>
+        Настоящая политика конфиденциальности может периодически обновляться. О
+        существенных изменениях будет сообщено внутри приложения. Актуальная
+        версия всегда публикуется на этой странице.
+      </p>
+    </section>
+
+  </div>
+
+  <p class="contact">По вопросам и запросам: <strong>sobir_0990@mail.ru</strong></p>
+</div>
+</body>
+</html>
