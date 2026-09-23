@@ -69,11 +69,6 @@ const dict = {
     "uz-Cyrl": "Чиқиш",
     ru: "Выйти",
   },
-  dataSource: {
-    "uz-Latn": "Savollar manbasi: Hoffenuz/avtotestu-v3.0.0 (ochiq repo)",
-    "uz-Cyrl": "Саволлар манбаси: Hoffenuz/avtotestu-v3.0.0 (очиқ репо)",
-    ru: "Источник вопросов: Hoffenuz/avtotestu-v3.0.0 (открытый репозиторий)",
-  },
 } as const;
 
 export type DictKey = keyof typeof dict;

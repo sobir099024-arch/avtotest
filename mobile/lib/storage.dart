@@ -10,6 +10,7 @@ class Storage {
 
   static const _localeKey = 'avtotest:locale';
   static const _attemptsPrefix = 'avtotest:attempts:';
+  static const _favoritesKey = 'avtotest:favorites';
 
   /// Cloud sync registers here to learn about every new local attempt.
   AttemptListener? _listener;
@@ -77,5 +78,18 @@ class Storage {
   Future<List<String>> allAttemptKeys() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getKeys().where((k) => k.startsWith(_attemptsPrefix)).map((k) => k.substring(_attemptsPrefix.length)).toList();
+  }
+
+  Future<Set<String>> getFavoriteIds() async {
+    final prefs = await SharedPreferences.getInstance();
+    return (prefs.getStringList(_favoritesKey) ?? const []).toSet();
+  }
+
+  Future<Set<String>> toggleFavorite(String questionId) async {
+    final prefs = await SharedPreferences.getInstance();
+    final set = (prefs.getStringList(_favoritesKey) ?? const []).toSet();
+    if (!set.remove(questionId)) set.add(questionId);
+    await prefs.setStringList(_favoritesKey, set.toList());
+    return set;
   }
 }

@@ -17,6 +17,22 @@ class AppColors {
     colors: [Color(0xFF2563EB), Color(0xFF4F46E5)],
   );
 
+  static const ticketsGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Color(0xFF8CC3F8), Color(0xFF4A90F2)],
+  );
+  static const categoriesGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Color(0xFF86DCA6), Color(0xFF45BE79)],
+  );
+  static const examGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Color(0xFFFBCF92), Color(0xFFF49A52)],
+  );
+
   // Rotating accent palette used for category icons / ticket badges.
   static const palette = [
     Color(0xFF2563EB),

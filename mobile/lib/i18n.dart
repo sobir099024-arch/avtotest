@@ -2,6 +2,8 @@ import 'models.dart';
 
 const Map<String, Map<String, String>> _dict = {
   'appTitle': {'uz-Latn': 'AvtoTest', 'uz-Cyrl': 'АвтоТест', 'ru': 'АвтоТест'},
+  'appTitlePrefix': {'uz-Latn': 'Avto', 'uz-Cyrl': 'Авто', 'ru': 'Авто'},
+  'appTitleSuffix': {'uz-Latn': 'Test', 'uz-Cyrl': 'Тест', 'ru': 'Тест'},
   'tickets': {'uz-Latn': 'Biletlar', 'uz-Cyrl': 'Билетлар', 'ru': 'Билеты'},
   'categories': {'uz-Latn': 'Mavzular', 'uz-Cyrl': 'Мавзулар', 'ru': 'Темы'},
   'exam': {'uz-Latn': 'Imtihon', 'uz-Cyrl': 'Имтиҳон', 'ru': 'Экзамен'},
@@ -68,10 +70,59 @@ const Map<String, Map<String, String>> _dict = {
     'uz-Cyrl': 'Чиқиш',
     'ru': 'Выйти',
   },
-  'dataSource': {
-    'uz-Latn': "Savollar manbasi: Hoffenuz/avtotestu-v3.0.0 (ochiq repo)",
-    'uz-Cyrl': 'Саволлар манбаси: Hoffenuz/avtotestu-v3.0.0 (очиқ репо)',
-    'ru': 'Источник вопросов: Hoffenuz/avtotestu-v3.0.0 (открытый репозиторий)',
+  'navHome': {'uz-Latn': 'Asosiy', 'uz-Cyrl': 'Асосий', 'ru': 'Главная'},
+  'navStats': {'uz-Latn': 'Statistika', 'uz-Cyrl': 'Статистика', 'ru': 'Статистика'},
+  'navFavorites': {'uz-Latn': 'Sevimlilar', 'uz-Cyrl': 'Севимлилар', 'ru': 'Избранное'},
+  'navSettings': {'uz-Latn': 'Sozlamalar', 'uz-Cyrl': 'Созламалар', 'ru': 'Настройки'},
+  'heroBanner': {
+    'uz-Latn': "Bugun mashq qiling — birinchi urinishda topshiring!",
+    'uz-Cyrl': 'Бугун машқ қилинг — биринчи уринишда топширинг!',
+    'ru': 'Готовьтесь сегодня и сдайте с первого раза!',
+  },
+  'statQuestionsLabel': {'uz-Latn': 'Savollar', 'uz-Cyrl': 'Саволлар', 'ru': 'Вопросов'},
+  'statAverageLabel': {'uz-Latn': "O'rtacha", 'uz-Cyrl': 'Ўртача', 'ru': 'Средний результат'},
+  'statTopicsLabel': {'uz-Latn': "O'tilgan mavzu", 'uz-Cyrl': 'Ўтилган мавзу', 'ru': 'Пройдено тем'},
+  'statStreakLabel': {'uz-Latn': 'Kunlik seriya', 'uz-Cyrl': 'Кунлик серия', 'ru': 'Дней подряд'},
+  'goalTitle': {
+    'uz-Latn': "Maqsadingiz — imtihondan o'tish!",
+    'uz-Cyrl': 'Мақсадингиз — имтиҳондан ўтиш!',
+    'ru': 'Ваша цель — сдать экзамен!',
+  },
+  'goalSubtitle': {
+    'uz-Latn': 'Muntazam mashq — muvaffaqiyat kaliti',
+    'uz-Cyrl': 'Мунтазам машқ — муваффақият калити',
+    'ru': 'Регулярная практика — ключ к успеху',
+  },
+  'theoryAndPractice': {
+    'uz-Latn': 'nazariya va amaliyot',
+    'uz-Cyrl': 'назария ва амалиёт',
+    'ru': 'теория и практика',
+  },
+  'minutes': {'uz-Latn': 'daqiqa', 'uz-Cyrl': 'дақиқа', 'ru': 'минут'},
+  'statsOverall': {'uz-Latn': 'Umumiy statistika', 'uz-Cyrl': 'Умумий статистика', 'ru': 'Общая статистика'},
+  'totalAttempts': {
+    'uz-Latn': 'Yechilgan testlar',
+    'uz-Cyrl': 'Ечилган тестлар',
+    'ru': 'Пройдено тестов',
+  },
+  'statsByTopic': {'uz-Latn': "Mavzular bo'yicha", 'uz-Cyrl': 'Мавзулар бўйича', 'ru': 'По темам'},
+  'noAttemptsYet': {
+    'uz-Latn': "Hali birorta test yechilmagan",
+    'uz-Cyrl': 'Ҳали бирорта тест ечилмаган',
+    'ru': 'Тестов пока нет',
+  },
+  'favoritesEmpty': {
+    'uz-Latn': "Sevimli savollar yo'q. Test paytida yurak belgisini bosib qo'shing.",
+    'uz-Cyrl': 'Севимли саволлар йўқ. Тест пайтида юрак белгисини босиб қўшинг.',
+    'ru': 'Избранных вопросов нет. Добавляйте их значком сердца во время теста.',
+  },
+  'language': {'uz-Latn': 'Til', 'uz-Cyrl': 'Тил', 'ru': 'Язык'},
+  'account': {'uz-Latn': 'Hisob', 'uz-Cyrl': 'Ҳисоб', 'ru': 'Аккаунт'},
+  'appVersion': {'uz-Latn': 'Ilova versiyasi', 'uz-Cyrl': 'Илова версияси', 'ru': 'Версия приложения'},
+  'notSignedIn': {
+    'uz-Latn': 'Tizimga kirilmagan',
+    'uz-Cyrl': 'Тизимга кирилмаган',
+    'ru': 'Вы не вошли в аккаунт',
   },
 };
 

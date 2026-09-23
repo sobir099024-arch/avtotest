@@ -17,6 +17,9 @@ dist-ssr
 .env.*
 !.env.example
 
+# Release keystore info — never commit real passwords
+RELEASE_KEYSTORE_INFO.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -93,7 +93,6 @@ export default function Home() {
             </svg>
           </Link>
         ))}
-        <p className="text-xs text-slate-400 pt-4 text-center">{t("dataSource", locale)}</p>
       </div>
     </div>
   );

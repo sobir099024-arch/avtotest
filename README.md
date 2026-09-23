@@ -1,3 +1,13 @@
+Debug SHA1 fingerprint:
+
+
+92:73:0C:FA:E0:E7:D7:9B:CB:0E:41:B4:18:92:D8:A2:59:7E:EE:26
+Firebase Console → ⚙️ Project settings → Your apps → Android ilovangiz → "Add fingerprint" tugmasiga shu SHA1 ni qo'ying.
+
+Along the way, I bumped mobile/android/settings.gradle.kts: AGP 8.9.1 → 8.11.1, Kotlin 2.1.0 → 2.2.20 — required for your installed Flutter SDK's Gradle 8.14 to build at all. These are uncommitted changes; let me know if you want me to commit them.
+
+
+
 # AvtoTest
 
 O'zbekiston YHQ (yo'l harakati qoidalari) nazariy imtihoniga tayyorgarlik uchun

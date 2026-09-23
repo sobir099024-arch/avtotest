@@ -119,3 +119,33 @@ sifatida qaraydi).
 qilingan: repo'da hech qachon ko'rinmaydi, faqat sizning kompyuteringizda
 qoladi. Boshqa kompyuterda build qilmoqchi bo'lsangiz, shu ikki faylni
 o'zingiz (xavfsiz kanal orqali) ko'chirib olib borishingiz kerak.
+
+## Reklama (AdMob)
+
+Ilova `google_mobile_ads` orqali interstitial (to'liq ekran) reklama
+ko'rsatadi — bu `lib/ad_manager.dart` (`AdManager`) da boshqariladi.
+
+**Qachon chiqadi:**
+- Ilova ochilganda / fonidan qaytganda (`lib/main.dart`)
+- Test yechish jarayonida bir marta (yarmiga yetganda) (`lib/screens/quiz_screen.dart`)
+- Test tugaganda — tugatilgan, xatolar ko'p bo'lgani uchun to'xtagan yoki
+  vaqt tugagani uchun to'xtagan har qanday holatda (`_finish()`)
+
+**Limit:** har bir foydalanuvchiga soatiga eng ko'pi bilan 10 ta reklama
+(`AdManager._maxPerHour`) va reklamalar orasida kamida 5 daqiqa oraliq
+(`AdManager._minGapBetweenAds`) — bu faol foydalanishda soatiga taxminan
+5–10 ta reklama ko'rsatishga olib keladi. Ko'rsatilgan vaqtlar
+`SharedPreferences`da saqlanadi va bir soatdan eskilari avtomatik
+tozalanadi.
+
+**Holat:** real AdMob ID'lar allaqachon ishlatilmoqda —
+- App ID (`AndroidManifest.xml`): `ca-app-pub-4055951911872773~7001203758`
+- Interstitial ad unit ID (`ad_manager.dart`): `ca-app-pub-4055951911872773/6899015998`
+
+Reklama kontenti **general audience (G)** darajasi bilan cheklangan
+(`AdManager.init()` dagi `maxAdContentRating`) — nomaqbul kategoriyalarni
+(alkogol, qimor, tanishuv va h.k.) qo'shimcha bloklash uchun AdMob
+konsolida **"Управление блокировкой"** bo'limidan foydalaning.
+
+Google Play'da chop etishdan oldin AdMob konsolida ilovangizni
+tasdiqlatishingiz kerak bo'lishi mumkin (App ads.txt / verification).

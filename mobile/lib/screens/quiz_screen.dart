@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import '../ad_manager.dart';
 import '../app_state.dart';
 import '../data_repository.dart';
 import '../models.dart';
@@ -41,6 +42,8 @@ class _QuizScreenState extends State<QuizScreen> {
   int _timeLeft = 0;
   Timer? _timer;
   bool _saved = false;
+  bool _midAdShown = false;
+  Set<String> _favoriteIds = {};
 
   @override
   void initState() {
@@ -52,9 +55,20 @@ class _QuizScreenState extends State<QuizScreen> {
   Future<void> _load() async {
     final all = await DataRepository.instance.loadQuestions();
     final qs = widget.config.questionIndices.map((i) => all[i]).toList();
+    final favorites = await Storage.instance.getFavoriteIds();
     if (!mounted) return;
-    setState(() => _questions = qs);
+    setState(() {
+      _questions = qs;
+      _favoriteIds = favorites;
+    });
     _startTimerIfNeeded();
+  }
+
+  Future<void> _toggleFavorite() async {
+    final id = _questions![_index].id;
+    final updated = await Storage.instance.toggleFavorite(id);
+    if (!mounted) return;
+    setState(() => _favoriteIds = updated);
   }
 
   void _startTimerIfNeeded() {
@@ -102,6 +116,7 @@ class _QuizScreenState extends State<QuizScreen> {
         AttemptRecord(correct: _correctCount, total: _questions!.length, finishedAt: DateTime.now()),
       );
     }
+    AdManager.instance.maybeShow();
   }
 
   void _choose(int ansIdx) {
@@ -117,6 +132,10 @@ class _QuizScreenState extends State<QuizScreen> {
       _finish(StopReason.completed);
     } else {
       setState(() => _index += 1);
+      if (!_midAdShown && _questions!.length > 1 && _index >= _questions!.length ~/ 2) {
+        _midAdShown = true;
+        AdManager.instance.maybeShow();
+      }
     }
   }
 
@@ -127,6 +146,7 @@ class _QuizScreenState extends State<QuizScreen> {
       _selected.clear();
       _finished = null;
       _saved = false;
+      _midAdShown = false;
       _timeLeft = widget.config.timeLimitSec ?? 0;
     });
     _startTimerIfNeeded();
@@ -166,6 +186,13 @@ class _QuizScreenState extends State<QuizScreen> {
       appBar: AppBar(
         title: Text('${appT(context, 'question')} ${_index + 1}/${_questions!.length}'),
         actions: [
+          IconButton(
+            onPressed: _toggleFavorite,
+            icon: Icon(
+              _favoriteIds.contains(q.id) ? Icons.favorite_rounded : Icons.favorite_border_rounded,
+              color: _favoriteIds.contains(q.id) ? AppColors.danger : Colors.grey.shade500,
+            ),
+          ),
           if (widget.config.timeLimitSec != null)
             Padding(
               padding: const EdgeInsets.only(right: 16),
